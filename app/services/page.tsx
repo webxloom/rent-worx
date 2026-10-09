@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import PageBanner from "@/components/PageBanner";
 import CtaBanner from "@/components/CtaBanner";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Services | Rent Worx Property Management",
   description:
     "Full-spectrum Auckland property management services: rent collection, tenant screening, inspections, repairs, marketing, meth testing, financial support and Tenancy Tribunal support.",
-};
+  path: "/services",
+});
 
 const services: { title: string; text: string; img: string; alt: string; svg: React.ReactNode }[] = [
   { title: "Rent Collection", text: "We manage rent collection and monitor payments closely, helping ensure rent is received on time and keeping you informed of any issues.", img: "/media/services/service-rent.avif", alt: "Rent Collection", svg: (<><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></>) },

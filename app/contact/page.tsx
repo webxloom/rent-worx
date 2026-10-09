@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import PageBanner from "@/components/PageBanner";
 import CtaBanner from "@/components/CtaBanner";
 import FormspreeForm from "@/components/forms/FormspreeForm";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Contact | Rent Worx Property Management",
   description:
     "Get in touch with Rajiv and the Rent Worx team. Call or WhatsApp +64 21 712 912, email rajiv@rentworx.co.nz, or send a message. Auckland property management.",
-};
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

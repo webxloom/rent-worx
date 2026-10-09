@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import CtaBanner from "@/components/CtaBanner";
 import PropertyGrid from "@/components/rentals/PropertyGrid";
 import RentalCarousel from "@/components/rentals/RentalCarousel";
 import { getProperties } from "@/lib/properties";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Rent / Viewings | Rent Worx Property Management",
   description:
     "Browse available rental properties across Auckland managed by Rent Worx, or explore more listings on Trade Me. Filter by city, bedrooms and weekly rent.",
-};
+  path: "/rentals",
+});
 
 // SSR so listings reflect the live MRI Palace-synced data (Phase 2).
 export const dynamic = "force-dynamic";

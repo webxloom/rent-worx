@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import PageBanner from "@/components/PageBanner";
 import CtaBanner from "@/components/CtaBanner";
 import FormspreeForm from "@/components/forms/FormspreeForm";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Switch to Rent Worx | Property Management",
+export const metadata = createPageMetadata({
+  title: "Switch to Rent Worx | Property Management | Auckland, New Zealand",
   description:
     "Seamlessly transition your Auckland rental portfolio to Rent Worx. We handle the entire handover with your existing agency and tenants.",
-};
+  path: "/switch",
+});
 
 export default function SwitchPage() {
   return (

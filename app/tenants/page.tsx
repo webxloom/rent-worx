@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import CtaBanner from "@/components/CtaBanner";
 import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Tenants | Rent Worx Property Management",
   description:
     "Tenant services & resources from Rent Worx — safe, compliant, well-maintained Auckland rentals, prompt maintenance, and helpful resident resources.",
-};
+  path: "/tenants",
+});
 
 const whyRent: { title: string; text: string; svg: React.ReactNode }[] = [
   { title: "Healthy Homes", text: "Every property is audited to ensure it is warm, dry, and fully compliant.", svg: (<><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></>) },
@@ -67,7 +68,7 @@ const resources: { title: string; svg: React.ReactNode; links: { label: string; 
 ];
 
 const faqs: FaqItem[] = [
-  { q: "HOW DO I APPLY?", a: (<>An application form is available by clicking <Link href="/rentals" style={{ color: "var(--accent-gold)", textDecoration: "underline" }}>here</Link>. Note each applicant is subject to a background and credit check.</>) },
+  { q: "HOW DO I APPLY?", a: (<>An application form is available by clicking <Link href="/contact" style={{ color: "var(--accent-gold)", textDecoration: "underline" }}>here</Link>. Note each applicant is subject to a background and credit check.</>) },
   { q: "WHAT ARE YOUR MOVE IN COST?", a: "On approval, every tenant is required to pay a four week bond and two week's rent in advance, unless stated otherwise in advertising." },
   { q: "HOW OFTEN DO YOU DO INSPECTION?", a: "We will inspect your home each quarter, unless otherwise stated by the property owner. All inspections and property access is done in accordance with the Residential Tenancies Act." },
   { q: "I WORK FULL TIME, HOW CAN I VIEW PROPERTY?", a: "We are available for viewings by appointment to suit." },

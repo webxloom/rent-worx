@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import PageBanner from "@/components/PageBanner";
 import CtaBanner from "@/components/CtaBanner";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "About Us | Rent Worx Property Management",
   description:
     "The Rent Worx story. Led by Rajiv Kumar, a boutique Auckland property management team with 20+ years in real estate — dedicated, bilingual, and entirely all-in.",
-};
+  path: "/about",
+});
 
 const reasonsA = [
   { n: 1, title: "Focused Management:", text: " Our focus is entirely on managing rental properties and supporting landlords and tenants." },

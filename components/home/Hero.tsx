@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <div className="hero">
       <div className="hero-video-wrapper">
-        <video autoPlay muted loop playsInline poster="/media/home/auckland-loader.avif" preload="auto" suppressHydrationWarning>
+        <video autoPlay muted loop playsInline poster="/media/home/hero-loader.avif" preload="auto" suppressHydrationWarning>
           <source src="/media/home/home-hero-clip.mp4" type="video/mp4" />
         </video>
       </div>
@@ -34,12 +34,12 @@ export default function Hero() {
           height={100}
           priority
         />
-        <h2 className={`hero-dyn-tag${tagVisible ? " visible" : ""}`}>
+        <h1 className={`hero-dyn-tag${tagVisible ? " visible" : ""}`}>
           YOUR PROPERTY<br />OUR PRIORITY
           <span className="hero-subtext">
-            Boutique property management with a personal touch—keeping you connected and your investment effortless.
+            Boutique property management with a personal touch - keeping you connected and your investment effortless.
           </span>
-        </h2>
+        </h1>
       </div>
     </div>
   );

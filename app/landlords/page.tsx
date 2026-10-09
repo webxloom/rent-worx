@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PageBanner from "@/components/PageBanner";
 import CtaBanner from "@/components/CtaBanner";
 import FaqAccordion, { type FaqItem } from "@/components/FaqAccordion";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Landlords | Rent Worx Property Management",
+export const metadata = createPageMetadata({
+  title: "Auckland Property Management for Landlords | Rent Worx",
   description:
     "Specialised property management for Auckland landlords — proactive updates, rigorous tenant selection, Healthy Homes compliance, flawless financials and transparent reporting.",
-};
+  path: "/landlords",
+});
 
 const solutions: { title: string; text: string; svg: React.ReactNode }[] = [
   { title: "Proactive Updates", text: "We keep you perfectly informed, managing flawless communication between you and your tenants.", svg: (<><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></>) },

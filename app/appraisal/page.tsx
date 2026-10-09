@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import PageBanner from "@/components/PageBanner";
 import CtaBanner from "@/components/CtaBanner";
 import FormspreeForm from "@/components/forms/FormspreeForm";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Rental Appraisal | Rent Worx Property Management",
   description:
     "Request an accurate, up-to-date rental appraisal for your Auckland property. Data-backed weekly returns, localized area analysis and official baseline rents.",
-};
+  path: "/appraisal",
+});
 
 const features: { title: string; text: string; svg: React.ReactNode }[] = [
   { title: "Targeted Weekly Returns", text: "A realistic estimation of the peak weekly rent your property can realistically command.", svg: (<><polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" /></>) },

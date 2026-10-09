@@ -3,6 +3,14 @@ import Image from "next/image";
 import Hero from "@/components/home/Hero";
 import TrustBanner from "@/components/TrustBanner";
 import TestimonialsMarquee from "@/components/TestimonialsMarquee";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata({
+  title: "Rent Worx | Property Management | Auckland, New Zealand",
+  description:
+    "Boutique residential property management across Auckland, New Zealand. Rigorous tenant selection, Healthy Homes compliance, and transparent reporting. Led by Rajiv Kumar.",
+  path: "/",
+});
 
 export default function HomePage() {
   return (
