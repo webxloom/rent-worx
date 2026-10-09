@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     "Boutique residential property management across Auckland, New Zealand. Rigorous tenant selection, Healthy Homes compliance, and transparent reporting. Led by Rajiv Kumar.",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
     ],
     apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
   },

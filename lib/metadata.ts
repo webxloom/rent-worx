@@ -6,7 +6,7 @@ type PageMetadataOptions = {
   path: string;
 };
 
-const shareImage = "/media/common/Rentworx__logo_mini.png";
+const shareImage = "/media/common/og-share.png";
 
 export function createPageMetadata({
   title,
@@ -28,9 +28,9 @@ export function createPageMetadata({
       images: [
         {
           url: shareImage,
-          width: 640,
-          height: 270,
-          alt: "Rent Worx",
+          width: 1200,
+          height: 630,
+          alt: "Rent Worx property management",
         },
       ],
     },
